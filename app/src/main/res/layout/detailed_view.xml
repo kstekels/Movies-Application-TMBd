@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/movieBigTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Star Wars: Episode IX - The Rise of Skywalker"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="8dp"
+            />
+
+        <TextView
+            android:id="@+id/movieReleaseDateDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Release date: 2021-04-29"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieBigTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginLeft="8dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:alpha="0.5"
+            android:paddingBottom="8dp"
+            />
+
+        <ImageView
+            android:id="@+id/moviePoster1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="center"
+            android:scaleY="2.1"
+            android:scaleX="2.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/movieReleaseDateDetails"
+            tools:src="@drawable/thumbnail"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/moviePoster1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/moviePoster2"
+                android:layout_width="140dp"
+                android:layout_height="200dp"
+                android:padding="4dp"
+                tools:src="@drawable/star_wars"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/moviePoster2"
+                android:layout_alignTop="@id/moviePoster2"
+                android:layout_alignBottom="@id/moviePoster2">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="left"
+                        android:textSize="14sp"
+                        android:alpha="0.8"
+                        tools:text=" Science Fiction, Action"
+                        android:text=" Science Fiction, Action"
+                        />
+                    <TextView
+                        android:id="@+id/movieRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:text="Rating: 8.9"
+                        android:textSize="12sp"
+                        android:textStyle="italic"
+                        android:gravity="right"
+                        android:alpha="0.8"
+                        android:paddingRight="8dp"
+                        />
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/movieDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:justificationMode="inter_word"
+                        android:textStyle="italic"
+                        tools:text="@string/movie_description" />
+
+                </ScrollView>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
